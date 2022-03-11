@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Ejercicio2_2_Firmas.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="22" CornerRadius="0">
+            <Label Text="Ejercicio_2._2_Firma" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+
+
+        <forms:SignaturePadView x:Name="PadView" StrokeColor="Black" BackgroundColor="White" StrokeWidth="3" WidthRequest="280" HeightRequest="360"/>
+
+        <Label Text="Nombre" TextColor="Black" FontSize="14" />
+        <Entry x:Name="nombre"  TextColor="Gray" FontSize="14" />
+
+        <Label Text="Descripcion" TextColor="Black" FontSize="14" />
+        <Entry x:Name="descripcion" Text="" TextColor="Gray" FontSize="14" />
+
+
+        <Grid ColumnDefinitions="*,*">
+            <Button x:Name="btnAgregar" CornerRadius="4" Text="Guardar Firma" BackgroundColor="ForestGreen" TextColor="White" FontSize="14" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="btnAgregar_Clicked"/>
+            <Button Grid.Column="1"  x:Name="btnListaFirma" CornerRadius="4" Text="Lista de Firmas" BackgroundColor="DodgerBlue" TextColor="White" FontSize="14" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="btnListaFirma_Clicked"/>
+        </Grid>
+
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Clear" CornerRadius="4" FontSize="14" BackgroundColor="Gray" TextColor="White" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="ClearButton_Clicked"/>
+            <Button Grid.Column="1"  x:Name="btnSalir" Text="Salir App" BackgroundColor="Red" CornerRadius="4" TextColor="White" FontSize="14" BorderWidth="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Clicked="btnSalir_Clicked"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
